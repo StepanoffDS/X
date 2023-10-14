@@ -1,0 +1,131 @@
+.vacancies-benefits {
+  margin-top: 157px;
+  margin-bottom: 220px;
+}
+
+.vacancies-benefits__inner {
+  position: relative;
+  padding: 94px 79px;
+  border-radius: 50px;
+  background-color: #fff;
+}
+
+.vacancies-benefits__text {}
+
+.vacancies-benefits__text-title {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.vacancies-benefits__text-list {
+  margin-top: 26px;
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    font-size: 16px;
+    color: var(--extratext-color);
+    list-style-type: square;
+    line-height: 25px;
+  }
+}
+
+.vacancies-benefits__img {
+  position: absolute;
+  top: 50%;
+  right: 80px;
+  transform: translateY(-50%);
+  max-width: 360px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(100px);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    z-index: -1;
+  }
+}
+
+@include mediaLaptop {
+  .vacancies-benefits__img {
+    right: 40px;
+  }
+
+  .vacancies-benefits__text-list {
+    max-width: 500px;
+  }
+}
+
+@include mediaTablet {
+  .vacancies-benefits__img {
+    max-width: 300px;
+
+    &::after {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .vacancies-benefits__text-list {
+    max-width: 400px;
+  }
+}
+
+@include mediaMobile {
+  .vacancies-benefits__inner {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 40px;
+    padding: 40px;
+    // overflow: hidden;
+  }
+
+  .vacancies-benefits__img {
+    right: -100px;
+
+    img {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::after {
+      z-index: 0;
+    }
+  }
+
+  .vacancies-benefits__text-list {
+    width: 70%;
+    max-width: none;
+  }
+}
+
+@include mediaExtraMobile {
+  .vacancies-benefits__inner {
+    padding: var(--mobile-padding);
+    border-radius: var(--mobile-border-radius);
+  }
+
+  .vacancies-benefits__text-title {
+    font-size: 30px;
+  }
+
+  .vacancies-benefits__text-list {
+    width: 100%;
+  }
+
+  .vacancies-benefits__img {
+    // margin-top: 40px;
+    position: relative;
+    right: 0;
+    transform: none;
+  }
+}

@@ -1,0 +1,32 @@
+/* Base */
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/vars";
+@import "./base/mixins";
+@import "./base/base";
+@import "./base/utils";
+@import "./base/containers";
+
+/* Blocks */
+@import "./blocks/promo";
+@import "./blocks/about";
+@import "./blocks/problem";
+@import "./blocks/work-scheme";
+@import "./blocks/interaction";
+@import "./blocks/benefits";
+@import "./blocks/bonuses";
+@import "./blocks/bonuses-grid";
+@import "./blocks/cooperation";
+@import "./blocks/cooperation-form";
+@import "./blocks/crisis-benefits";
+@import "./blocks/crisis-benefits-cards";
+@import "./blocks/revenue";
+@import "./blocks/revenue-block";
+@import "./blocks/questions";
+@import "./blocks/contact";
+@import "./blocks/vacancies-promo";
+@import "./blocks/vacancies-professions";
+@import "./blocks/vacancies-benefits";
+@import "./blocks/neuronet-promo";
+@import "./blocks/neuronet-product";
+@import "./blocks/neuronet-feedback";

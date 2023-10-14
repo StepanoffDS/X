@@ -1,0 +1,30 @@
+.bonuses {
+  margin-top: 225px;
+  color: var(--main-color);
+}
+
+.bonuses__inner {}
+
+.bonuses__title {
+  text-align: center;
+}
+
+.bonuses__grid {
+  margin-top: 110px;
+}
+
+@include mediaLaptop {
+  .bonuses {
+    margin-top: 150px;
+  }
+}
+
+@include mediaExtraMobile {
+  .bonuses {
+    margin-top: 100px;
+  }
+
+  .bonuses__grid {
+    margin-top: 80px;
+  }
+}

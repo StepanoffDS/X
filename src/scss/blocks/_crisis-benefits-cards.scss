@@ -1,0 +1,120 @@
+.crisis-benefits-cards {
+  display: grid;
+  gap: 20px;
+}
+
+.crisis-benefits-cards__row {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+}
+
+.crisis-benefits-cards__item {
+  display: grid;
+  gap: 25px;
+  position: relative;
+  padding: 73px 100px;
+  background-color: rgba($color: #fff, $alpha: 0.05);
+  border-radius: 50px;
+  z-index: 1;
+
+  &.last-left-card::before {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: -100%;
+    transform: translate(93%, -19%);
+    background-image: url('./../img/crisis-benefits/klipartz.png');
+    background-position: center center; // x y
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 395px;
+    aspect-ratio: 1/1;
+    z-index: -1;
+
+  }
+}
+
+.crisis-benefits-cards__item-number {
+  position: absolute;
+  top: 42px;
+  left: 36px;
+  font-family: var(--font-secondary);
+  font-size: 30px;
+}
+
+.crisis-benefits-cards__item-title {
+  font-size: 25px;
+}
+
+.crisis-benefits-cards__item-descr {}
+
+@media screen and (max-width: 1310px) {
+  .crisis-benefits-cards {
+    justify-items: center;
+  }
+
+  .crisis-benefits-cards__row {
+    max-width: 1221px;
+  }
+
+  .crisis-benefits-cards__item {
+    max-width: 600px;
+  }
+
+  .crisis-benefits-cards__item.last-left-card::before {
+    bottom: -83%;
+    left: -105%;
+    transform: translate(93%, -19%);
+  }
+}
+
+@include mediaLaptop {
+  .crisis-benefits-cards__item {
+    max-width: 516px;
+    padding: 50px 50px 50px 100px;
+  }
+
+  .crisis-benefits-cards__item.last-left-card::before {
+    bottom: -97%;
+    left: -105%;
+    transform: translate(69%, -19%);
+  }
+}
+
+@include mediaTablet {
+  .crisis-benefits-cards__item {
+    padding: 50px 25px 50px 90px;
+  }
+
+  .crisis-benefits-cards__item-number {
+    top: 52px;
+  }
+
+  .crisis-benefits-cards__item.last-left-card::before {
+    display: none;
+  }
+}
+
+@include mediaMobile {
+  .crisis-benefits-cards__row {
+    grid-template-columns: 1fr;
+  }
+
+  .crisis-benefits-cards__item {
+    max-width: none;
+  }
+}
+
+@include mediaExtraMobile {
+  .crisis-benefits-cards__item {
+    padding: var(--mobile-padding);
+    border-radius: var(--mobile-border-radius);
+  }
+
+  .crisis-benefits-cards__item-number {
+    display: none;
+  }
+}

@@ -1,0 +1,117 @@
+.interaction {
+  margin-top: 225px;
+  color: var(--main-color);
+}
+
+.interaction__inner {}
+
+.interaction__title {
+  text-align: center;
+}
+
+.interaction__grid {
+  margin-top: 105px;
+}
+
+.interaction__grid-row {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 109px 1fr;
+  grid-template-rows: 1fr;
+  gap: 45px;
+
+  &.odd {
+    grid-template-areas:
+      "descr number .";
+  }
+
+  &.even {
+    grid-template-areas:
+      ". number descr";
+  }
+}
+
+.interaction__grid-row-descr {
+  grid-area: descr;
+  padding: 37px 44px;
+  background: linear-gradient(90deg, rgba(247, 209, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0) 100%);
+
+  p:nth-child(2) {
+    margin-top: 20px;
+  }
+}
+
+.interaction__grid-row-number {
+  grid-area: number;
+  font-size: 28px;
+  font-family: var(--font-secondary);
+  color: var(--accent-color);
+  aspect-ratio: 1/1;
+  position: relative;
+  background-image: url('./../img/interaction/ellipse.png');
+  background-position: center center; // x y
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@include mediaLaptop {
+  .interaction {
+    margin-top: 150px;
+  }
+}
+
+@include mediaTablet {
+  .interaction__grid-row {
+    grid-template-columns: 109px auto;
+    padding: 10px 0;
+
+    &.odd {
+      grid-template-areas: 'number descr';
+    }
+
+    &.even {
+      grid-template-areas: 'number descr';
+    }
+  }
+}
+
+@include mediaMobile {
+  .interaction__grid {
+    margin-top: 50px;
+  }
+}
+
+@include mediaExtraMobile {
+  .interaction {
+    margin-top: 100px;
+  }
+
+  .interaction__grid-row,
+  .interaction__grid-row.odd,
+  .interaction__grid-row.even {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template-rows: 100px auto;
+    grid-template-areas:
+      "number"
+      "descr";
+  }
+
+  .interaction__grid-row-number {
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  .interaction__grid-row-descr {
+    padding: var(--mobile-padding);
+  }
+}

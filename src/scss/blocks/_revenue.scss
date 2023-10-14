@@ -1,0 +1,34 @@
+.revenue {
+  margin-top: 300px;
+}
+
+.revenue__inner {}
+
+.revenue__title {
+  text-align: center;
+  color: var(--main-color);
+}
+
+.revenue__block {
+  margin-top: 58px;
+}
+
+@include mediaLaptop {
+  .revenue {
+    margin-top: 150px;
+  }
+}
+
+@include mediaExtraMobile {
+  .revenue {
+    margin-top: 100px;
+  }
+
+  .revenue__title {
+    text-align: left;
+
+    br {
+      display: none;
+    }
+  }
+}

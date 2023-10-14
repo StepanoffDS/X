@@ -1,0 +1,23 @@
+:root {
+  --container-width: 1310px;
+  --container-padding: 15px;
+
+  --mobile-padding: 20px;
+  --mobile-border-radius: 20px;
+
+  --font-main: 'Montserrat', 'Times New Roman';
+  --font-secondary: 'w3-ip', 'Times New Roman';
+
+  --main-color: #fff;
+  --text-color: #101010;
+  --extratext-color: #282828;
+  --card-color: #f3f3f3;
+  --accent-color: #f7d100;
+  --muted-color: #636363;
+  --color-red: red;
+}
+
+$xl-size: 1250px;
+$lg-size: 1080px;
+$md-size: 900px;
+$sm-size: 650px;

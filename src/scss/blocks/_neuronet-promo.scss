@@ -1,0 +1,81 @@
+.neuronet-promo {
+  margin-top: 40px;
+}
+
+.neuronet-promo__inner {
+  position: relative;
+  padding: 100px 74px;
+  border-radius: 50px;
+  background-color: var(--card-color);
+}
+
+.neuronet-promo__text {
+  width: 70%;
+  color: var(--text-color);
+}
+
+.neuronet-promo__text-title {
+  font-family: var(--font-secondary);
+  font-size: 50px;
+}
+
+.neuronet-promo__text-subtitle {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.neuronet-promo__text-descr {
+  p {
+    margin-top: 20px;
+  }
+}
+
+.neuronet-promo__img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-40%);
+}
+
+@include mediaLaptop {
+  .neuronet-promo__text {
+    width: 50%;
+  }
+}
+
+@include mediaTablet {
+  .neuronet-promo__inner {
+    padding: 100px 40px;
+  }
+}
+
+@include mediaMobile {
+  .neuronet-promo__inner {
+    padding: 40px;
+
+    >div {
+      width: 100%;
+    }
+  }
+
+  .neuronet-promo__img {
+    position: relative;
+    transform: none;
+    margin-top: 40px;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+
+@include mediaExtraMobile {
+  .neuronet-promo__inner {
+    padding: var(--mobile-padding);
+    border-radius: var(--mobile-border-radius);
+  }
+
+  .neuronet-promo__text-title {
+    font-size: 40px;
+  }
+}

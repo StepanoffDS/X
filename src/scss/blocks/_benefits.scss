@@ -1,0 +1,101 @@
+.benefits {
+  margin-top: 235px;
+  // overflow-x: hidden;
+}
+
+.benefits__inner {
+  position: relative;
+  padding: 70px 54px;
+  background-color: var(--card-color);
+  border-radius: 50px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -90px;
+    right: -60px;
+    background-image: url('./../img/benefits/chain.png');
+    background-position: center center; // x y
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 147px;
+    height: 236px;
+    z-index: -1;
+  }
+}
+
+.benefits__text {}
+
+.benefits__text-title {}
+
+.benefits__text-list {
+  margin-top: 50px;
+  display: flex;
+  gap: 50px;
+
+  ul {
+    max-width: 455px;
+  }
+
+  li {
+    list-style: disc;
+    margin-bottom: 15px;
+  }
+}
+
+.benefits__img {
+  position: absolute;
+  bottom: 0;
+  right: -12px;
+  max-width: 363px;
+}
+
+@include mediaLaptop {
+  .benefits {
+    margin-top: 150px;
+  }
+
+  .benefits__text-list {
+    ul {
+      max-width: 316px;
+    }
+  }
+
+  .benefits__img {
+    right: -12px;
+    max-width: 330px;
+  }
+}
+
+@include mediaTablet {
+  .benefits__img {
+    display: none;
+  }
+}
+
+@include mediaMobile {
+  .benefits__inner {
+    padding: 50px 50px 35px;
+  }
+
+  .benefits__text-list {
+    flex-direction: column;
+    gap: 0;
+
+    ul {
+      max-width: none;
+    }
+  }
+}
+
+@include mediaExtraMobile {
+  .benefits__inner {
+    padding: var(--mobile-padding);
+    border-radius: var(--mobile-border-radius);
+  }
+
+  .benefits__text-list {
+    padding-left: 10px;
+  }
+}

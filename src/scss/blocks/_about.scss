@@ -1,0 +1,87 @@
+.about {
+  margin-top: 100px;
+}
+
+.about__inner {
+  color: var(--main-color);
+  display: flex;
+  gap: 70px;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.about__img {
+  min-width: 400px;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: grid;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background-image: url('./../img/about/pins.png');
+    background-position: center center; // x y
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 103px;
+  }
+}
+
+.about__text {
+  margin-top: 50px;
+  max-width: 740px;
+
+}
+
+.about__text-title {}
+
+.about__text-descr {
+  margin-top: 48px;
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+@include mediaTablet {
+  .about__inner {
+    // flex-direction: column;
+    gap: 20px;
+  }
+
+  .about__img {
+    min-width: 300px;
+
+    &::before {
+      top: 20px;
+      left: 40px;
+      width: 70px;
+      height: 103px;
+    }
+  }
+}
+
+@include mediaMobile {
+  .about__inner {
+    flex-direction: column;
+  }
+
+  .about__img {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .about__text {
+    max-width: none;
+  }
+
+  .about__text-title {
+    text-align: center;
+
+    br {
+      display: none;
+    }
+  }
+}

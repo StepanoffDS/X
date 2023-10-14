@@ -1,0 +1,68 @@
+.cooperation {
+  margin-top: 200px;
+}
+
+.cooperation__inner {
+  position: relative;
+  padding: 70px 54px;
+  background-color: rgba($color: #fff, $alpha: 0.1);
+  border-radius: 50px;
+}
+
+.cooperation__text {}
+
+.cooperation__text-title {}
+
+.cooperation__text-form {
+  margin-top: 68px;
+}
+
+.cooperation__img {
+  position: absolute;
+  bottom: 0;
+  right: 66px;
+  background-image: url('./../img/cooperation/bg-light.png');
+  background-position: center center; // x y
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@include mediaLaptop {
+  .cooperation__img {
+    right: 7px;
+    max-width: 360px;
+  }
+}
+
+@include mediaTablet {
+  .cooperation__img {
+    display: none;
+  }
+}
+
+@include mediaMobile {
+  .cooperation {
+    margin-top: -90px;
+  }
+
+  .cooperation__inner {
+    padding: 50px;
+  }
+}
+
+@include mediaExtraMobile {
+  .cooperation {
+    margin-top: -150px;
+  }
+
+  .cooperation__inner {
+    padding: var(--mobile-padding);
+    border-radius: var(--mobile-border-radius);
+  }
+
+  .cooperation__text-title {
+    br {
+      display: none;
+    }
+  }
+}

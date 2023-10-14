@@ -1,0 +1,207 @@
+.revenue-block {
+  padding: 64px 60px;
+  background-color: var(--card-color);
+  border-radius: 50px;
+}
+
+.revenue-block__grid {
+  display: grid;
+  grid-template-columns: 1fr 568px;
+  gap: 45px;
+}
+
+.revenue-block__info {}
+
+.revenue-block__info-descr {
+  display: grid;
+  gap: 20px;
+}
+
+.revenue-block__info-profit {
+  margin-top: 140px;
+  display: grid;
+  gap: 48px;
+}
+
+.revenue-block__info-profit-item {}
+
+.revenue-block__info-profit-item-price {}
+
+.revenue-block__info-profit-item-descr {
+  margin-top: 20px;
+}
+
+.revenue-block__info-comment {
+  margin-top: 90px;
+  font-size: 15px;
+
+}
+
+.revenue-block__calc {
+  padding: 56px 38px;
+  display: grid;
+  gap: 60px;
+  background-color: #fff;
+  border-radius: 28px;
+}
+
+.revenue-block__calc-range {
+  p {
+    font-size: 18px;
+    color: var(--extratext-color);
+  }
+}
+
+.revenue-block__calc-range-input {
+  position: relative;
+
+  input {
+    margin-top: 20px;
+    width: 100%;
+    height: 3px;
+    position: relative;
+    appearance: none;
+    background-color: var(--accent-color);
+    cursor: pointer;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 21px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      border: 3px solid var(--accent-color);
+      background-color: #fff;
+      position: relative;
+    }
+  }
+
+  output {
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    transform: translateX(-50%);
+    font-size: 15px;
+    color: #8c8c8c;
+  }
+
+  .input__number-first {
+    position: absolute;
+    font-size: 15px;
+    bottom: -25px;
+    left: 0;
+    color: #8c8c8c;
+  }
+
+  .input__number-second {
+    position: absolute;
+    font-size: 15px;
+    bottom: -25px;
+    right: 0;
+    color: #8c8c8c;
+  }
+}
+
+.revenue-block__calc-check {}
+
+.revenue-block__calc-check-text {
+  font-size: 18px;
+}
+
+.revenue-block__calc-check-price {
+  margin-top: 20px;
+  font-family: var(--font-secondary);
+  font-size: 45px;
+}
+
+@include mediaLaptop {
+  .revenue-block__grid {
+    grid-template-columns: 1fr;
+    // grid-template-rows: auto auto;
+    grid-template-areas:
+      "calc"
+      "descr";
+  }
+
+  .revenue-block__info {
+    grid-area: descr;
+  }
+
+  .revenue-block__calc {
+    grid-area: calc;
+  }
+
+  .revenue-block__info-profit {
+    margin-top: 50px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .revenue-block__info-comment {
+    margin-top: 60px;
+  }
+}
+
+@include mediaTablet {
+  .revenue-block {
+    padding: 40px;
+  }
+
+  .revenue-block__info-profit {
+    gap: 0;
+  }
+
+  .revenue-block__info-profit {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-areas:
+      'first-info-profit'
+      'second-info-profit';
+  }
+
+  .revenue-block__info-profit-item:nth-child(1) {
+    text-align: left;
+    grid-area: first-info-profit;
+  }
+
+  .revenue-block__info-profit-item:nth-child(2) {
+    text-align: right;
+    grid-area: second-info-profit;
+  }
+}
+
+@include mediaExtraMobile {
+  .revenue-block {
+    padding: var(--mobile-padding);
+    border-radius: var(--mobile-border-radius);
+  }
+
+  .revenue-block__grid {
+    border-radius: var(--mobile-border-radius);
+  }
+
+  .revenue-block__calc {
+    padding: var(--mobile-padding);
+    border-radius: var(--mobile-border-radius);
+  }
+
+  .revenue-block__info-profit-item:nth-child(1) {
+    text-align-last: left;
+  }
+
+  .revenue-block__info-profit-item:nth-child(2) {
+    text-align-last: left;
+  }
+
+  .revenue-block__info-profit-item-price {
+    font-size: 30px;
+  }
+
+  .revenue-block__info-profit-item-descr {
+    margin-top: 10px;
+  }
+
+  .revenue-block__calc-check-price {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+}

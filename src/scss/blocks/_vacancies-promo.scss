@@ -1,0 +1,91 @@
+.vacancies-promo {}
+
+.vacancies-promo__inner {
+  position: relative;
+  padding: 128px 84px;
+  background-color: var(--card-color);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.vacancies-promo__text {
+  display: grid;
+  gap: 55px;
+}
+
+.vacancies-promo__text-title {
+  font-size: 50px;
+  font-family: var(--font-secondary);
+}
+
+.vacancies-promo__text-descr {
+  max-width: 700px;
+  font-size: 25px;
+  color: var(--text-color);
+}
+
+.vacancies-promo__img {
+  position: absolute;
+  top: 50%;
+  right: -180px;
+  transform: translateY(-50%);
+  max-width: 771px;
+}
+
+@include mediaLaptop {
+  .vacancies-promo__img {
+    right: -280px;
+  }
+
+  .vacancies-promo__text-descr {
+    max-width: 500px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+@include mediaTablet {
+  .vacancies-promo__inner {
+    padding: 80px;
+  }
+
+  .vacancies-promo__img {
+    right: -400px;
+  }
+}
+
+@include mediaMobile {
+  .vacancies-promo__inner {
+    padding: 80px 40px;
+  }
+
+  .vacancies-promo__img {
+    right: -600px;
+  }
+
+  .vacancies-promo__text-descr {
+    max-width: none;
+    width: 90%;
+  }
+}
+
+@include mediaExtraMobile {
+  .vacancies-promo__inner {
+    padding: var(--mobile-padding);
+    border-radius: var(--mobile-border-radius);
+  }
+
+  .vacancies-promo__text-descr {
+    width: 100%;
+    font-size: 22px;
+  }
+
+  .vacancies-promo__img {
+    margin-top: 40px;
+    width: 600px;
+    position: static;
+    transform: translate(-5%, 0%);
+  }
+}

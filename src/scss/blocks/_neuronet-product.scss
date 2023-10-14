@@ -1,0 +1,57 @@
+.neuronet-product {
+  margin-top: 200px;
+  color: var(--main-color);
+}
+
+.neuronet-product__inner {
+  display: grid;
+  gap: 45px;
+}
+
+.neuronet-product__text {
+  text-align: center;
+}
+
+.neuronet-product__text-title {
+  font-family: var(--font-secondary);
+  font-size: 30px;
+}
+
+.neuronet-product__text-subtitle {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.neuronet-product__img {
+  overflow: hidden;
+
+  img {
+    border-radius: 50px;
+    margin: 0 auto;
+  }
+}
+
+@include mediaMobile {
+  .neuronet-product {
+    margin-top: 100px;
+  }
+
+  .neuronet-product__text-subtitle {
+    br {
+      display: none;
+    }
+  }
+}
+
+@include mediaExtraMobile {
+  .neuronet-product__inner {
+    overflow: hidden;
+  }
+
+  .neuronet-product__img {
+    img {
+      border-radius: var(--mobile-border-radius);
+    }
+  }
+}

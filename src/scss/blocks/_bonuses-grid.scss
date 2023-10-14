@@ -1,0 +1,38 @@
+.bonuses-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 58px;
+}
+
+.bonuses-grid__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 140px;
+}
+
+.bonuses-grid__row-item {}
+
+.bonuses-grid__row-item-img {
+  height: 68px;
+
+  img {
+    height: 68px;
+  }
+}
+
+.bonuses-grid__row-item-descr {
+  margin-top: 25px;
+}
+
+@include mediaMobile {
+  .bonuses-grid__row {
+    flex-direction: column;
+    gap: 60px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .bonuses-grid {
+    gap: 60px;
+  }
+}

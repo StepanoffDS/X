@@ -1,0 +1,84 @@
+.promo {}
+
+.container {}
+
+.promo__inner {
+  display: grid;
+  background-color: var(--card-color);
+  border-radius: 50px;
+  padding: 99px 54px;
+  overflow: hidden;
+
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    right: -140px;
+    background-image: url('./../img/promo/cloud.png');
+    background-position: 1px 1px; // x y
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 503px;
+    aspect-ratio: 503 / 452;
+  }
+}
+
+.promo__title {
+  margin-bottom: 45px;
+
+  .title-1 {
+    color: var(--contrast-color);
+  }
+}
+
+.promo__descr {
+  font-size: 35px;
+  margin-bottom: 64px;
+}
+
+.promo__secondary-descr {}
+
+@include mediaTablet {
+  .promo__inner {
+    padding: 99px 54px;
+    overflow: hidden;
+
+    &::after {
+      bottom: -102px;
+      right: -120px;
+      background-position: 1px 1px; // x y
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 320px;
+      height: 250px;
+    }
+  }
+}
+
+@include mediaMobile {
+  .promo__inner {
+    padding: 50px 50px 80px;
+  }
+
+  .promo__title {
+    margin-bottom: 30px;
+  }
+
+  .promo__descr {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+}
+
+@include mediaExtraMobile {
+  .promo__inner {
+    padding: var(--mobile-padding);
+    border-radius: var(--mobile-border-radius);
+  }
+
+  .promo__inner::after {
+    display: none;
+  }
+}

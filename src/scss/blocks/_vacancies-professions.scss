@@ -1,0 +1,90 @@
+.vacancies-professions {
+  margin-top: 142px;
+}
+
+.vacancies-professions__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  color: var(--main-color);
+  position: relative;
+  overflow: hidden;
+
+
+}
+
+.vacancies-professions__card {
+  padding: 53px 79px;
+  background-color: rgba($color: #fff, $alpha: 0.05);
+  border-radius: 50px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 385px;
+    height: 100%;
+    background-image: url('./../img/vacancies/blessing.png');
+    background-repeat: no-repeat;
+  }
+}
+
+.vacancies-professions__card-title {
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.vacancies-professions__card-salary {
+  margin-top: 12px;
+  margin-bottom: 44px;
+  font-size: 18px;
+}
+
+.vacancies-professions__card-descr {
+  display: grid;
+  gap: 20px;
+}
+
+.vacancies-professions__card-list {
+  max-width: 750px;
+
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  >ul {
+    display: grid;
+    gap: 5px;
+    padding-left: 18px;
+
+    >li {
+      font-size: 16px;
+      list-style-type: square;
+    }
+  }
+}
+
+@include mediaMobile {
+  .vacancies-professions__card {
+    padding: 40px;
+  }
+}
+
+@include mediaExtraMobile {
+  .vacancies-professions {
+    margin-top: 100px;
+  }
+
+  .vacancies-professions__card {
+    padding: var(--mobile-padding);
+    border-radius: var(--mobile-border-radius);
+  }
+
+  .vacancies-professions__card-title {
+    font-size: 30px;
+  }
+}
